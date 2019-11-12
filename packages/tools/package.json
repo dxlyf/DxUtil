@@ -2,10 +2,14 @@
   "name": "@dxyl/tools",
   "version": "1.0.1",
   "description": "function tools",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "module": "esm/index.js",
-  "files": ["package.json", "esm", "lib", "README.md"],
+  "buildOptions": {
+    "name": "Dx",
+    "formats": ["esm", "cjs", "global", "esm-browser"]
+  },
+  "main": "index.js",
+  "types": "dist/tools.d.ts",
+  "module": "dist/tools.esm-bundler.js",
+  "files": ["package.json", "dist", "index.js", "lib", "README.md"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -30,7 +30,7 @@ files.forEach(shortName => {
       description: name,
       main: 'index.js',
       module: `dist/${shortName}.esm-bundler.js`,
-      files: [`index.js`, `dist`],
+      files: [`index.js`, `dist`, `package.json`, `README.md`],
       types: `dist/${shortName}.d.ts`,
       buildOptions: {
         name: 'Dx',
