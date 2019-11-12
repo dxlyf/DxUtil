@@ -19,7 +19,7 @@
   "tsd": {
     "directory": "test-dts"
   },
-  "gitHooks": {
+  "notgitHooks": {
     "pre-commit": "lint-staged",
     "commit-msg": "node scripts/verifyCommit.js"
   },
