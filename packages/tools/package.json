@@ -1,15 +1,26 @@
 {
   "name": "@dxyl/tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "function tools",
   "buildOptions": {
     "name": "Dx",
-    "formats": ["esm", "cjs", "global", "esm-browser"]
+    "formats": [
+      "esm",
+      "cjs",
+      "global",
+      "esm-browser"
+    ]
   },
   "main": "index.js",
   "types": "dist/tools.d.ts",
   "module": "dist/tools.esm-bundler.js",
-  "files": ["package.json", "dist", "index.js", "lib", "README.md"],
+  "files": [
+    "package.json",
+    "dist",
+    "index.js",
+    "lib",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +32,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["util", "antv", "g"],
+  "keywords": [
+    "util",
+    "antv",
+    "g"
+  ],
   "license": "ISC"
 }

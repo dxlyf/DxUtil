@@ -1,14 +1,12 @@
 {
   "name": "dx-util",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "scripts": {
     "start": "nodemon src/index.js localhost 8080",
     "bootstrap": "node scripts/bootstrap.js",
     "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",
-    "publish": "cross-env HUSKY_SKIP_HOOKS=1 lerna publish",
+    "publish": "cross-env skipVerify=1 HUSKY_SKIP_HOOKS=1 lerna publish",
     "size-runtime": "node scripts/build.js runtime-dom -p -f global",
     "size-compiler": "node scripts/build.js compiler-dom -p -f global",
     "size": "yarn size-runtime && yarn size-compiler",
@@ -26,14 +24,8 @@
     "commit-msg": "node scripts/verifyCommit.js"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write",
-      "git add"
-    ]
+    "*.js": ["prettier --write", "git add"],
+    "*.ts?(x)": ["prettier --parser=typescript --write", "git add"]
   },
   "dependencies": {
     "cross-env": "^5.2.1"
