@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "sourceMap": false,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "jsx": "preserve",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "jest",
+      "node"
+    ],
+    "rootDir": ".",
+    "paths": {
+      "@dxyl/tools": [
+        "packages/tools/src"
+      ]
+    }
+  },
+  "include": [
+    "packages/global.d.ts",
+    "packages/runtime-dom/jsx.d.ts",
+    "packages/*/src",
+    "packages/*/__tests__",
+    "test-dts"
+  ]
+}

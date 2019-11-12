@@ -1,0 +1,19 @@
+{
+  "name": "@dxyl/tools",
+  "version": "1.0.1",
+  "description": "function tools",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "esm/index.js",
+  "files": ["package.json", "esm", "lib", "README.md"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "https://github.com/fanyonglong/DxUtil",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanyonglong/DxUtil.git"
+  },
+  "keywords": ["util", "antv", "g"],
+  "license": "ISC"
+}
