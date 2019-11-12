@@ -41,6 +41,9 @@ files.forEach(shortName => {
         type: 'git',
         url: 'git+https://github.com/fanyonglong/DxUtil.git'
       },
+      publishConfig: {
+        access: 'public'
+      },
       keywords: ['util'],
       license: 'MIT',
       bugs: {

@@ -1,6 +1,10 @@
 // Invoked on the commit-msg git hook by yorkie.
 
 const chalk = require('chalk')
+
+if (process.env.skipVerify) {
+  return
+}
 const msgPath = process.env.GIT_PARAMS
 const msg = require('fs')
   .readFileSync(msgPath, 'utf-8')

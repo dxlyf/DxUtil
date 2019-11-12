@@ -1,18 +1,21 @@
 {
   "name": "dx-util",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "start": "nodemon src/index.js localhost 8080",
     "bootstrap": "node scripts/bootstrap.js",
     "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",
-    "publish": "lerna publish",
+    "publish": "cross-env HUSKY_SKIP_HOOKS=1 lerna publish",
     "size-runtime": "node scripts/build.js runtime-dom -p -f global",
     "size-compiler": "node scripts/build.js compiler-dom -p -f global",
     "size": "yarn size-runtime && yarn size-compiler",
     "lint": "prettier --write --parser typescript \"packages/**/*.ts?(x)\"",
     "test": "jest",
-    "test-dts": "node scripts/build.js reactivity runtime-core runtime-dom -t -f esm && tsd"
+    "test-dts": "node scripts/build.js reactivity runtime-core runtime-dom -t -f esm && tsd",
+    "env": "cross-env HUSKY_SKIP_HOOKS=1 node ./src/test.js"
   },
   "types": "test-dts/index.d.ts",
   "tsd": {
@@ -23,10 +26,18 @@
     "commit-msg": "node scripts/verifyCommit.js"
   },
   "lint-staged": {
-    "*.js": ["prettier --write", "git add"],
-    "*.ts?(x)": ["prettier --parser=typescript --write", "git add"]
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "git add"
+    ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "cross-env": "^5.2.1"
+  },
   "devDependencies": {
     "nodemon": "1.18.4",
     "@microsoft/api-extractor": "7.5.6",

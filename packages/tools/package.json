@@ -1,6 +1,6 @@
 {
   "name": "@dxyl/tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "function tools",
   "buildOptions": {
     "name": "Dx",
@@ -17,6 +17,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fanyonglong/DxUtil.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": ["util", "antv", "g"],
   "license": "ISC"
