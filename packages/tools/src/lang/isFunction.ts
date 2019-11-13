@@ -1,4 +1,4 @@
-function isFunction(obj: any) {
-  return typeof obj === 'function'
+function isFunction(value: any): boolean {
+  return typeof value === "function";
 }
-export default isFunction
+export default isFunction;

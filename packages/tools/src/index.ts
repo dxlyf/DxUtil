@@ -1,1 +1,2 @@
-export { default as isFunction } from './isFunction'
+export * from "./lang";
+export * from "./class";
